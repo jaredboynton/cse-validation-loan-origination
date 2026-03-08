@@ -1,0 +1,32 @@
+name: Onboard Loan Origination API
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'specs/**'
+      - '.github/workflows/onboard.yml'
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  onboard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: postman-cs/postman-api-onboarding-action@v0
+        with:
+          project-name: loan-origination-api
+          domain: lending
+          domain-code: LND
+          spec-url: https://raw.githubusercontent.com/jaredboynton/cse-validation-loan-origination/main/specs/loan-origination-api-openapi.yaml
+          environments-json: '["prod","staging"]'
+          env-runtime-urls-json: '{"prod":"https://lending-api.example.com/v1","staging":"https://lending-api-staging.example.com/v1"}'
+          postman-api-key: ${{ secrets.POSTMAN_API_KEY }}
+          postman-access-token: ${{ secrets.POSTMAN_ACCESS_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          gh-fallback-token: ${{ secrets.GH_FALLBACK_TOKEN }}
