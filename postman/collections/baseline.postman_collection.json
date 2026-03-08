@@ -1,13 +1,13 @@
 {
   "info": {
-    "_postman_id": "b69e859f-7298-48bd-8fdb-caaa3b99233c",
+    "_postman_id": "43be7796-4fdc-4ca3-a23f-2fe6b8df2be6",
     "name": "[Baseline] loan-origination-api",
     "description": "API for managing loan application origination, underwriting decisions, and\ndocument collection in the Lending domain. This service handles the full\nlifecycle from application submission through approval or denial.\n\n**Authentication:**\n- Service-to-service: mTLS (mutual TLS)\n- Internal gateway: JWT token (Bearer token)\n\n**Rate Limits:**\n- Standard: 200 requests/minute\n- Batch operations: 50 requests/minute\n\n\nContact Support:\n Name: Lending Platform Team\n Email: lending-platform@example.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "createdAt": "2026-03-08T20:07:15.000Z",
-    "updatedAt": "2026-03-08T20:07:15.000Z",
+    "createdAt": "2026-03-08T20:08:32.000Z",
+    "updatedAt": "2026-03-08T20:08:33.000Z",
     "lastUpdatedBy": "53017284",
-    "uid": "53017284-b69e859f-7298-48bd-8fdb-caaa3b99233c"
+    "uid": "53017284-43be7796-4fdc-4ca3-a23f-2fe6b8df2be6"
   },
   "item": [
     {
@@ -21,7 +21,7 @@
               "item": [
                 {
                   "name": "Trigger underwriting evaluation",
-                  "id": "9e7dc0cd-0ca1-455a-85d9-7ebb56658eea",
+                  "id": "138bdbef-eabe-4438-a282-53967652fc45",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -59,7 +59,7 @@
                       ],
                       "variable": [
                         {
-                          "id": "20550e8f-e673-4f22-889a-ff29fffce57b",
+                          "id": "2a13dc02-36e9-4a75-8e14-5e4b15efeaa4",
                           "key": "applicationId",
                           "value": "string"
                         }
@@ -69,7 +69,7 @@
                   },
                   "response": [
                     {
-                      "id": "85dc18e5-76e2-43f0-8922-29f48633229c",
+                      "id": "8020ad93-2d0e-4583-a85b-1210fb094197",
                       "name": "Underwriting evaluation queued",
                       "originalRequest": {
                         "method": "POST",
@@ -127,13 +127,13 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n  \"applicationId\": \"string\",\n  \"status\": \"in_progress\",\n  \"decision\": \"approved\",\n  \"riskScore\": 64,\n  \"evaluatedAt\": \"2023-04-03T14:08:05.067Z\"\n}",
-                      "createdAt": "2026-03-08T20:07:16.000Z",
-                      "updatedAt": "2026-03-08T20:07:16.000Z",
-                      "uid": "53017284-85dc18e5-76e2-43f0-8922-29f48633229c"
+                      "body": "{\n  \"applicationId\": \"string\",\n  \"status\": \"failed\",\n  \"decision\": \"referred_to_manual\",\n  \"riskScore\": 10,\n  \"evaluatedAt\": \"1959-05-22T12:30:18.260Z\"\n}",
+                      "createdAt": "2026-03-08T20:08:33.000Z",
+                      "updatedAt": "2026-03-08T20:08:33.000Z",
+                      "uid": "53017284-8020ad93-2d0e-4583-a85b-1210fb094197"
                     },
                     {
-                      "id": "7a273cc7-c315-44fa-b2f8-092ae3dcd99c",
+                      "id": "985685e9-c42e-4379-9fe6-9c606ab3ddfa",
                       "name": "Application not found",
                       "originalRequest": {
                         "method": "POST",
@@ -183,12 +183,12 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": null,
-                      "createdAt": "2026-03-08T20:07:16.000Z",
-                      "updatedAt": "2026-03-08T20:07:16.000Z",
-                      "uid": "53017284-7a273cc7-c315-44fa-b2f8-092ae3dcd99c"
+                      "createdAt": "2026-03-08T20:08:33.000Z",
+                      "updatedAt": "2026-03-08T20:08:33.000Z",
+                      "uid": "53017284-985685e9-c42e-4379-9fe6-9c606ab3ddfa"
                     },
                     {
-                      "id": "070960a8-1691-4986-95e7-c71ce318c6ee",
+                      "id": "f425445f-20b5-4425-a049-f08cebdd5210",
                       "name": "Underwriting already in progress",
                       "originalRequest": {
                         "method": "POST",
@@ -238,27 +238,27 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": null,
-                      "createdAt": "2026-03-08T20:07:16.000Z",
-                      "updatedAt": "2026-03-08T20:07:16.000Z",
-                      "uid": "53017284-070960a8-1691-4986-95e7-c71ce318c6ee"
+                      "createdAt": "2026-03-08T20:08:33.000Z",
+                      "updatedAt": "2026-03-08T20:08:33.000Z",
+                      "uid": "53017284-f425445f-20b5-4425-a049-f08cebdd5210"
                     }
                   ],
-                  "createdAt": "2026-03-08T20:07:16.000Z",
-                  "updatedAt": "2026-03-08T20:07:16.000Z",
-                  "uid": "53017284-9e7dc0cd-0ca1-455a-85d9-7ebb56658eea"
+                  "createdAt": "2026-03-08T20:08:33.000Z",
+                  "updatedAt": "2026-03-08T20:08:33.000Z",
+                  "uid": "53017284-138bdbef-eabe-4438-a282-53967652fc45"
                 }
               ],
-              "id": "a798022e-4c7f-472f-b53d-235a8aada0db",
-              "createdAt": "2026-03-08T20:07:16.000Z",
-              "updatedAt": "2026-03-08T20:07:16.000Z",
-              "uid": "53017284-a798022e-4c7f-472f-b53d-235a8aada0db"
+              "id": "7e58901f-2921-4c6b-8e28-738a09cc86bf",
+              "createdAt": "2026-03-08T20:08:33.000Z",
+              "updatedAt": "2026-03-08T20:08:33.000Z",
+              "uid": "53017284-7e58901f-2921-4c6b-8e28-738a09cc86bf"
             },
             {
               "name": "documents",
               "item": [
                 {
                   "name": "Upload a document",
-                  "id": "ae4a92a5-5f87-47e2-b4bc-8c9a93ec3708",
+                  "id": "6aa18457-5b40-44bf-b383-5fcfd532465a",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -284,7 +284,7 @@
                         },
                         {
                           "key": "documentType",
-                          "value": "tax_return",
+                          "value": "employment_letter",
                           "type": "text"
                         }
                       ]
@@ -301,7 +301,7 @@
                       ],
                       "variable": [
                         {
-                          "id": "dbca7858-1b86-4e0e-b8df-78d418376869",
+                          "id": "3373c542-3044-43b6-b38b-6d3e7e9fdc33",
                           "key": "applicationId",
                           "value": "string"
                         }
@@ -311,7 +311,7 @@
                   },
                   "response": [
                     {
-                      "id": "55fdd061-25b5-4c04-ace8-48327cd64c42",
+                      "id": "831a151c-5b7f-48c2-8dd8-53f44c52fb7c",
                       "name": "Document uploaded successfully",
                       "originalRequest": {
                         "method": "POST",
@@ -339,7 +339,7 @@
                             },
                             {
                               "key": "documentType",
-                              "value": "tax_return",
+                              "value": "employment_letter",
                               "type": "text"
                             }
                           ]
@@ -373,13 +373,13 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n  \"id\": \"string\",\n  \"applicationId\": \"string\",\n  \"documentType\": \"string\",\n  \"fileName\": \"string\",\n  \"uploadedAt\": \"2015-09-30T11:09:06.536Z\",\n  \"verificationStatus\": \"pending\"\n}",
-                      "createdAt": "2026-03-08T20:07:16.000Z",
-                      "updatedAt": "2026-03-08T20:07:16.000Z",
-                      "uid": "53017284-55fdd061-25b5-4c04-ace8-48327cd64c42"
+                      "body": "{\n  \"id\": \"string\",\n  \"applicationId\": \"string\",\n  \"documentType\": \"string\",\n  \"fileName\": \"string\",\n  \"uploadedAt\": \"1985-01-05T22:07:08.499Z\",\n  \"verificationStatus\": \"pending\"\n}",
+                      "createdAt": "2026-03-08T20:08:33.000Z",
+                      "updatedAt": "2026-03-08T20:08:33.000Z",
+                      "uid": "53017284-831a151c-5b7f-48c2-8dd8-53f44c52fb7c"
                     },
                     {
-                      "id": "77d33192-68be-4028-bb9d-e2a6ea5120ac",
+                      "id": "a0bdb42d-d9d9-41a7-8305-5461360b15bd",
                       "name": "Invalid document or unsupported format",
                       "originalRequest": {
                         "method": "POST",
@@ -403,7 +403,7 @@
                             },
                             {
                               "key": "documentType",
-                              "value": "tax_return",
+                              "value": "employment_letter",
                               "type": "text"
                             }
                           ]
@@ -433,18 +433,18 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": null,
-                      "createdAt": "2026-03-08T20:07:16.000Z",
-                      "updatedAt": "2026-03-08T20:07:16.000Z",
-                      "uid": "53017284-77d33192-68be-4028-bb9d-e2a6ea5120ac"
+                      "createdAt": "2026-03-08T20:08:33.000Z",
+                      "updatedAt": "2026-03-08T20:08:33.000Z",
+                      "uid": "53017284-a0bdb42d-d9d9-41a7-8305-5461360b15bd"
                     }
                   ],
-                  "createdAt": "2026-03-08T20:07:16.000Z",
-                  "updatedAt": "2026-03-08T20:07:16.000Z",
-                  "uid": "53017284-ae4a92a5-5f87-47e2-b4bc-8c9a93ec3708"
+                  "createdAt": "2026-03-08T20:08:33.000Z",
+                  "updatedAt": "2026-03-08T20:08:33.000Z",
+                  "uid": "53017284-6aa18457-5b40-44bf-b383-5fcfd532465a"
                 },
                 {
                   "name": "List application documents",
-                  "id": "53d1786a-0974-4b37-a830-b5391a917dd5",
+                  "id": "62e6d7fc-b9bb-4371-acc9-8460104be7ab",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -468,7 +468,7 @@
                       ],
                       "variable": [
                         {
-                          "id": "12d74f39-8c71-4af8-a0b3-fa8da17b1808",
+                          "id": "b7cc5519-1b18-4acb-80c3-abc8ba961891",
                           "key": "applicationId",
                           "value": "string"
                         }
@@ -477,7 +477,7 @@
                   },
                   "response": [
                     {
-                      "id": "fa7652b0-40b4-474a-8df8-8520c7923bf0",
+                      "id": "12d45d4b-f7f8-4eb5-93cb-bb40f947b7a9",
                       "name": "List of documents",
                       "originalRequest": {
                         "method": "GET",
@@ -521,25 +521,25 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "[\n  {\n    \"id\": \"string\",\n    \"applicationId\": \"string\",\n    \"documentType\": \"string\",\n    \"fileName\": \"string\",\n    \"uploadedAt\": \"1947-08-11T20:06:40.509Z\",\n    \"verificationStatus\": \"rejected\"\n  },\n  {\n    \"id\": \"string\",\n    \"applicationId\": \"string\",\n    \"documentType\": \"string\",\n    \"fileName\": \"string\",\n    \"uploadedAt\": \"2015-03-26T12:46:58.232Z\",\n    \"verificationStatus\": \"rejected\"\n  }\n]",
-                      "createdAt": "2026-03-08T20:07:16.000Z",
-                      "updatedAt": "2026-03-08T20:07:16.000Z",
-                      "uid": "53017284-fa7652b0-40b4-474a-8df8-8520c7923bf0"
+                      "body": "[\n  {\n    \"id\": \"string\",\n    \"applicationId\": \"string\",\n    \"documentType\": \"string\",\n    \"fileName\": \"string\",\n    \"uploadedAt\": \"1970-08-31T20:24:30.150Z\",\n    \"verificationStatus\": \"verified\"\n  },\n  {\n    \"id\": \"string\",\n    \"applicationId\": \"string\",\n    \"documentType\": \"string\",\n    \"fileName\": \"string\",\n    \"uploadedAt\": \"1980-05-08T03:50:35.268Z\",\n    \"verificationStatus\": \"pending\"\n  }\n]",
+                      "createdAt": "2026-03-08T20:08:33.000Z",
+                      "updatedAt": "2026-03-08T20:08:33.000Z",
+                      "uid": "53017284-12d45d4b-f7f8-4eb5-93cb-bb40f947b7a9"
                     }
                   ],
-                  "createdAt": "2026-03-08T20:07:16.000Z",
-                  "updatedAt": "2026-03-08T20:07:16.000Z",
-                  "uid": "53017284-53d1786a-0974-4b37-a830-b5391a917dd5"
+                  "createdAt": "2026-03-08T20:08:33.000Z",
+                  "updatedAt": "2026-03-08T20:08:33.000Z",
+                  "uid": "53017284-62e6d7fc-b9bb-4371-acc9-8460104be7ab"
                 }
               ],
-              "id": "4fd9b48f-7753-4c74-b42a-2e5cc3f4ed1b",
-              "createdAt": "2026-03-08T20:07:16.000Z",
-              "updatedAt": "2026-03-08T20:07:16.000Z",
-              "uid": "53017284-4fd9b48f-7753-4c74-b42a-2e5cc3f4ed1b"
+              "id": "9e344923-e140-460f-bd70-bf94213a39fd",
+              "createdAt": "2026-03-08T20:08:33.000Z",
+              "updatedAt": "2026-03-08T20:08:33.000Z",
+              "uid": "53017284-9e344923-e140-460f-bd70-bf94213a39fd"
             },
             {
               "name": "Get application details",
-              "id": "c6136610-d257-42ef-9eb3-45bb5cb455d8",
+              "id": "b9185910-5fe8-4f8c-a196-722e1acfe3b1",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -562,7 +562,7 @@
                   ],
                   "variable": [
                     {
-                      "id": "2e890e6f-8939-49c6-bbc5-5958e5456b33",
+                      "id": "e965a638-3ed0-4a7e-9394-2adeb5410f11",
                       "key": "applicationId",
                       "value": "string"
                     }
@@ -572,7 +572,7 @@
               },
               "response": [
                 {
-                  "id": "3cde4bf1-8c1a-4f3e-b383-6f532eb60893",
+                  "id": "1a9de211-19bc-473e-8575-56202d4f2ae2",
                   "name": "Application details",
                   "originalRequest": {
                     "method": "GET",
@@ -615,13 +615,13 @@
                   ],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n  \"id\": \"string\",\n  \"applicantId\": \"string\",\n  \"productType\": \"string\",\n  \"requestedAmount\": 8095.436038674422,\n  \"termMonths\": 3884,\n  \"status\": \"submitted\",\n  \"createdAt\": \"2018-06-01T18:17:39.628Z\",\n  \"updatedAt\": \"1989-07-21T08:50:48.034Z\",\n  \"underwritingResult\": {\n    \"applicationId\": \"string\",\n    \"status\": \"in_progress\",\n    \"decision\": \"referred_to_manual\",\n    \"riskScore\": 45,\n    \"evaluatedAt\": \"1948-11-22T03:39:56.212Z\"\n  }\n}",
-                  "createdAt": "2026-03-08T20:07:16.000Z",
-                  "updatedAt": "2026-03-08T20:07:16.000Z",
-                  "uid": "53017284-3cde4bf1-8c1a-4f3e-b383-6f532eb60893"
+                  "body": "{\n  \"id\": \"string\",\n  \"applicantId\": \"string\",\n  \"productType\": \"string\",\n  \"requestedAmount\": 5283.385474402125,\n  \"termMonths\": 3995,\n  \"status\": \"withdrawn\",\n  \"createdAt\": \"1971-07-27T05:58:11.248Z\",\n  \"updatedAt\": \"2003-09-18T04:15:35.401Z\",\n  \"underwritingResult\": {\n    \"applicationId\": \"string\",\n    \"status\": \"pending\",\n    \"decision\": \"referred_to_manual\",\n    \"riskScore\": 89,\n    \"evaluatedAt\": \"2018-10-15T16:51:18.524Z\"\n  }\n}",
+                  "createdAt": "2026-03-08T20:08:33.000Z",
+                  "updatedAt": "2026-03-08T20:08:33.000Z",
+                  "uid": "53017284-1a9de211-19bc-473e-8575-56202d4f2ae2"
                 },
                 {
-                  "id": "2572b269-388c-4a03-99ce-aa135ee275fa",
+                  "id": "8496f1d8-7c27-4972-8fc3-5ce4b4557dd6",
                   "name": "Application not found",
                   "originalRequest": {
                     "method": "GET",
@@ -665,24 +665,24 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"details\": {}\n}",
-                  "createdAt": "2026-03-08T20:07:16.000Z",
-                  "updatedAt": "2026-03-08T20:07:16.000Z",
-                  "uid": "53017284-2572b269-388c-4a03-99ce-aa135ee275fa"
+                  "createdAt": "2026-03-08T20:08:33.000Z",
+                  "updatedAt": "2026-03-08T20:08:33.000Z",
+                  "uid": "53017284-8496f1d8-7c27-4972-8fc3-5ce4b4557dd6"
                 }
               ],
-              "createdAt": "2026-03-08T20:07:16.000Z",
-              "updatedAt": "2026-03-08T20:07:16.000Z",
-              "uid": "53017284-c6136610-d257-42ef-9eb3-45bb5cb455d8"
+              "createdAt": "2026-03-08T20:08:33.000Z",
+              "updatedAt": "2026-03-08T20:08:33.000Z",
+              "uid": "53017284-b9185910-5fe8-4f8c-a196-722e1acfe3b1"
             }
           ],
-          "id": "c175bd7c-7c72-4a96-990e-f13799931459",
-          "createdAt": "2026-03-08T20:07:16.000Z",
-          "updatedAt": "2026-03-08T20:07:16.000Z",
-          "uid": "53017284-c175bd7c-7c72-4a96-990e-f13799931459"
+          "id": "1cbf9d9e-f404-4ea2-8266-f0c145ebd0bb",
+          "createdAt": "2026-03-08T20:08:33.000Z",
+          "updatedAt": "2026-03-08T20:08:33.000Z",
+          "uid": "53017284-1cbf9d9e-f404-4ea2-8266-f0c145ebd0bb"
         },
         {
           "name": "Submit a new loan application",
-          "id": "4fcc2405-67c6-4980-9a0c-983a7462a250",
+          "id": "0bc17041-d566-4ed5-89bc-30a024b526c6",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -721,7 +721,7 @@
           },
           "response": [
             {
-              "id": "cd9876c3-6b36-4db7-91d7-805dbd4ef625",
+              "id": "6befa14d-c3ca-478e-9d82-989b9a40e515",
               "name": "Application created successfully",
               "originalRequest": {
                 "method": "POST",
@@ -771,13 +771,13 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n  \"id\": \"string\",\n  \"applicantId\": \"string\",\n  \"productType\": \"string\",\n  \"requestedAmount\": 8095.436038674422,\n  \"termMonths\": 3884,\n  \"status\": \"submitted\",\n  \"createdAt\": \"2018-06-01T18:17:39.628Z\",\n  \"updatedAt\": \"1989-07-21T08:50:48.034Z\",\n  \"underwritingResult\": {\n    \"applicationId\": \"string\",\n    \"status\": \"in_progress\",\n    \"decision\": \"referred_to_manual\",\n    \"riskScore\": 45,\n    \"evaluatedAt\": \"1948-11-22T03:39:56.212Z\"\n  }\n}",
-              "createdAt": "2026-03-08T20:07:16.000Z",
-              "updatedAt": "2026-03-08T20:07:16.000Z",
-              "uid": "53017284-cd9876c3-6b36-4db7-91d7-805dbd4ef625"
+              "body": "{\n  \"id\": \"string\",\n  \"applicantId\": \"string\",\n  \"productType\": \"string\",\n  \"requestedAmount\": 5283.385474402125,\n  \"termMonths\": 3995,\n  \"status\": \"withdrawn\",\n  \"createdAt\": \"1971-07-27T05:58:11.248Z\",\n  \"updatedAt\": \"2003-09-18T04:15:35.401Z\",\n  \"underwritingResult\": {\n    \"applicationId\": \"string\",\n    \"status\": \"pending\",\n    \"decision\": \"referred_to_manual\",\n    \"riskScore\": 89,\n    \"evaluatedAt\": \"2018-10-15T16:51:18.524Z\"\n  }\n}",
+              "createdAt": "2026-03-08T20:08:33.000Z",
+              "updatedAt": "2026-03-08T20:08:33.000Z",
+              "uid": "53017284-6befa14d-c3ca-478e-9d82-989b9a40e515"
             },
             {
-              "id": "f2d8b912-100a-4934-b437-ed7745ca7471",
+              "id": "fa975435-9c4a-44dd-b7f2-1a104dbc5527",
               "name": "Invalid application data",
               "originalRequest": {
                 "method": "POST",
@@ -828,12 +828,12 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"details\": {}\n}",
-              "createdAt": "2026-03-08T20:07:16.000Z",
-              "updatedAt": "2026-03-08T20:07:16.000Z",
-              "uid": "53017284-f2d8b912-100a-4934-b437-ed7745ca7471"
+              "createdAt": "2026-03-08T20:08:33.000Z",
+              "updatedAt": "2026-03-08T20:08:33.000Z",
+              "uid": "53017284-fa975435-9c4a-44dd-b7f2-1a104dbc5527"
             },
             {
-              "id": "15d361fe-1d12-4dc1-b618-86516b4f7b81",
+              "id": "0bcd37c3-bedc-47fd-9a10-7c17905c2a3a",
               "name": "Duplicate active application exists",
               "originalRequest": {
                 "method": "POST",
@@ -884,18 +884,18 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"details\": {}\n}",
-              "createdAt": "2026-03-08T20:07:16.000Z",
-              "updatedAt": "2026-03-08T20:07:16.000Z",
-              "uid": "53017284-15d361fe-1d12-4dc1-b618-86516b4f7b81"
+              "createdAt": "2026-03-08T20:08:33.000Z",
+              "updatedAt": "2026-03-08T20:08:33.000Z",
+              "uid": "53017284-0bcd37c3-bedc-47fd-9a10-7c17905c2a3a"
             }
           ],
-          "createdAt": "2026-03-08T20:07:16.000Z",
-          "updatedAt": "2026-03-08T20:07:16.000Z",
-          "uid": "53017284-4fcc2405-67c6-4980-9a0c-983a7462a250"
+          "createdAt": "2026-03-08T20:08:33.000Z",
+          "updatedAt": "2026-03-08T20:08:33.000Z",
+          "uid": "53017284-0bc17041-d566-4ed5-89bc-30a024b526c6"
         },
         {
           "name": "List loan applications",
-          "id": "faecdc5b-be4f-494c-95ce-cc6d941e8fdb",
+          "id": "1da59bf7-8a3d-4f73-a416-5c6be1a59037",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -908,7 +908,7 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/applications?status=denied&productType=business_loan&limit=25&offset=0",
+              "raw": "{{baseUrl}}/applications?status=under_review&productType=business_loan&limit=25&offset=0",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -919,7 +919,7 @@
                 {
                   "description": "Filter by application status",
                   "key": "status",
-                  "value": "denied"
+                  "value": "under_review"
                 },
                 {
                   "description": "Filter by loan product type",
@@ -940,7 +940,7 @@
           },
           "response": [
             {
-              "id": "8f26d5e5-55b6-4d54-8d5f-2b12336bf3e7",
+              "id": "60a2bcde-2f93-4b18-974a-b33e8ac8116c",
               "name": "List of applications",
               "originalRequest": {
                 "method": "GET",
@@ -956,7 +956,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{baseUrl}}/applications?status=denied&productType=business_loan&limit=25&offset=0",
+                  "raw": "{{baseUrl}}/applications?status=under_review&productType=business_loan&limit=25&offset=0",
                   "host": [
                     "{{baseUrl}}"
                   ],
@@ -967,7 +967,7 @@
                     {
                       "description": "Filter by application status",
                       "key": "status",
-                      "value": "denied"
+                      "value": "under_review"
                     },
                     {
                       "description": "Filter by loan product type",
@@ -996,28 +996,28 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"applicantId\": \"string\",\n      \"productType\": \"string\",\n      \"requestedAmount\": 1578.6596134431652,\n      \"termMonths\": 4182,\n      \"status\": \"under_review\",\n      \"createdAt\": \"1966-10-24T05:37:05.052Z\",\n      \"updatedAt\": \"1961-09-20T18:06:25.336Z\",\n      \"underwritingResult\": {\n        \"applicationId\": \"string\",\n        \"status\": \"in_progress\",\n        \"decision\": \"referred_to_manual\",\n        \"riskScore\": 82,\n        \"evaluatedAt\": \"1972-12-01T05:34:38.557Z\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"applicantId\": \"string\",\n      \"productType\": \"string\",\n      \"requestedAmount\": 568.5811530621154,\n      \"termMonths\": 5253,\n      \"status\": \"under_review\",\n      \"createdAt\": \"1980-05-12T18:21:14.244Z\",\n      \"updatedAt\": \"1963-03-13T22:25:53.715Z\",\n      \"underwritingResult\": {\n        \"applicationId\": \"string\",\n        \"status\": \"failed\",\n        \"decision\": \"approved\",\n        \"riskScore\": 45,\n        \"evaluatedAt\": \"1973-02-17T01:42:45.542Z\"\n      }\n    }\n  ],\n  \"total\": 1573,\n  \"limit\": 5084,\n  \"offset\": 542\n}",
-              "createdAt": "2026-03-08T20:07:16.000Z",
-              "updatedAt": "2026-03-08T20:07:16.000Z",
-              "uid": "53017284-8f26d5e5-55b6-4d54-8d5f-2b12336bf3e7"
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"applicantId\": \"string\",\n      \"productType\": \"string\",\n      \"requestedAmount\": 5296.556157219889,\n      \"termMonths\": 6845,\n      \"status\": \"approved\",\n      \"createdAt\": \"2019-01-09T02:10:39.672Z\",\n      \"updatedAt\": \"2003-04-30T20:22:01.860Z\",\n      \"underwritingResult\": {\n        \"applicationId\": \"string\",\n        \"status\": \"completed\",\n        \"decision\": \"denied\",\n        \"riskScore\": 94,\n        \"evaluatedAt\": \"1990-08-11T10:15:50.971Z\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"applicantId\": \"string\",\n      \"productType\": \"string\",\n      \"requestedAmount\": 1285.13022994442,\n      \"termMonths\": 5319,\n      \"status\": \"under_review\",\n      \"createdAt\": \"2008-10-26T12:56:48.919Z\",\n      \"updatedAt\": \"2013-01-01T16:28:36.590Z\",\n      \"underwritingResult\": {\n        \"applicationId\": \"string\",\n        \"status\": \"completed\",\n        \"decision\": \"denied\",\n        \"riskScore\": 3,\n        \"evaluatedAt\": \"1966-09-06T09:12:24.844Z\"\n      }\n    }\n  ],\n  \"total\": 1082,\n  \"limit\": 7730,\n  \"offset\": 4667\n}",
+              "createdAt": "2026-03-08T20:08:33.000Z",
+              "updatedAt": "2026-03-08T20:08:33.000Z",
+              "uid": "53017284-60a2bcde-2f93-4b18-974a-b33e8ac8116c"
             }
           ],
-          "createdAt": "2026-03-08T20:07:16.000Z",
-          "updatedAt": "2026-03-08T20:07:16.000Z",
-          "uid": "53017284-faecdc5b-be4f-494c-95ce-cc6d941e8fdb"
+          "createdAt": "2026-03-08T20:08:33.000Z",
+          "updatedAt": "2026-03-08T20:08:33.000Z",
+          "uid": "53017284-1da59bf7-8a3d-4f73-a416-5c6be1a59037"
         }
       ],
-      "id": "bede7fe1-816d-4c08-9e19-3e388d2c6c18",
-      "createdAt": "2026-03-08T20:07:16.000Z",
-      "updatedAt": "2026-03-08T20:07:16.000Z",
-      "uid": "53017284-bede7fe1-816d-4c08-9e19-3e388d2c6c18"
+      "id": "13e06151-19eb-4454-89bd-f3805dd1cdcc",
+      "createdAt": "2026-03-08T20:08:33.000Z",
+      "updatedAt": "2026-03-08T20:08:33.000Z",
+      "uid": "53017284-13e06151-19eb-4454-89bd-f3805dd1cdcc"
     },
     {
       "name": "health",
       "item": [
         {
           "name": "Service health check",
-          "id": "4eed4025-d8c4-4a1f-86ab-0d2454cdfa18",
+          "id": "d7d2d987-91f9-4f17-af2f-9458d7bea6d1",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1041,7 +1041,7 @@
           },
           "response": [
             {
-              "id": "98187da9-ffe3-471e-8d6f-e759cc46c923",
+              "id": "68215b6c-dd5a-4cf7-84a3-334548639ad5",
               "name": "Service is healthy",
               "originalRequest": {
                 "method": "GET",
@@ -1077,21 +1077,21 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n  \"status\": \"unhealthy\",\n  \"version\": \"string\",\n  \"uptime\": \"string\",\n  \"dependencies\": {\n    \"database\": \"string\",\n    \"creditBureau\": \"string\",\n    \"documentStore\": \"string\"\n  }\n}",
-              "createdAt": "2026-03-08T20:07:16.000Z",
-              "updatedAt": "2026-03-08T20:07:16.000Z",
-              "uid": "53017284-98187da9-ffe3-471e-8d6f-e759cc46c923"
+              "body": "{\n  \"status\": \"degraded\",\n  \"version\": \"string\",\n  \"uptime\": \"string\",\n  \"dependencies\": {\n    \"database\": \"string\",\n    \"creditBureau\": \"string\",\n    \"documentStore\": \"string\"\n  }\n}",
+              "createdAt": "2026-03-08T20:08:33.000Z",
+              "updatedAt": "2026-03-08T20:08:33.000Z",
+              "uid": "53017284-68215b6c-dd5a-4cf7-84a3-334548639ad5"
             }
           ],
-          "createdAt": "2026-03-08T20:07:16.000Z",
-          "updatedAt": "2026-03-08T20:07:16.000Z",
-          "uid": "53017284-4eed4025-d8c4-4a1f-86ab-0d2454cdfa18"
+          "createdAt": "2026-03-08T20:08:33.000Z",
+          "updatedAt": "2026-03-08T20:08:33.000Z",
+          "uid": "53017284-d7d2d987-91f9-4f17-af2f-9458d7bea6d1"
         }
       ],
-      "id": "9dca35e3-4c23-43e6-aa85-fda20ad1b8c6",
-      "createdAt": "2026-03-08T20:07:16.000Z",
-      "updatedAt": "2026-03-08T20:07:16.000Z",
-      "uid": "53017284-9dca35e3-4c23-43e6-aa85-fda20ad1b8c6"
+      "id": "05cd9183-db92-424b-b6bb-45998f03e806",
+      "createdAt": "2026-03-08T20:08:33.000Z",
+      "updatedAt": "2026-03-08T20:08:33.000Z",
+      "uid": "53017284-05cd9183-db92-424b-b6bb-45998f03e806"
     }
   ],
   "auth": {
