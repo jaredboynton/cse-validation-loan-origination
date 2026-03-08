@@ -3,8 +3,7 @@
     "_postman_id": "c7a209ae-446a-49bc-bb7b-d463df0bc217",
     "name": "[Baseline] loan-origination-api",
     "description": "API for managing loan application origination, underwriting decisions, and\ndocument collection in the Lending domain. This service handles the full\nlifecycle from application submission through approval or denial.\n\n**Authentication:**\n- Service-to-service: mTLS (mutual TLS)\n- Internal gateway: JWT token (Bearer token)\n\n**Rate Limits:**\n- Standard: 200 requests/minute\n- Batch operations: 50 requests/minute\n\n\nContact Support:\n Name: Lending Platform Team\n Email: lending-platform@example.com",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "uid": "53017284-c7a209ae-446a-49bc-bb7b-d463df0bc217"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
@@ -121,8 +120,7 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n  \"applicationId\": \"string\",\n  \"status\": \"failed\",\n  \"decision\": \"denied\",\n  \"riskScore\": 11,\n  \"evaluatedAt\": \"1981-01-02T04:05:16.422Z\"\n}",
-                      "uid": "53017284-98e09289-fd3d-4a32-830a-003180ff60a3"
+                      "body": "{\n  \"applicationId\": \"string\",\n  \"status\": \"failed\",\n  \"decision\": \"denied\",\n  \"riskScore\": 11,\n  \"evaluatedAt\": \"1981-01-02T04:05:16.422Z\"\n}"
                     },
                     {
                       "name": "Application not found",
@@ -173,8 +171,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": null,
-                      "uid": "53017284-b65fd2e7-de2b-44ec-a248-d4fba634217c"
+                      "body": null
                     },
                     {
                       "name": "Underwriting already in progress",
@@ -225,14 +222,11 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": null,
-                      "uid": "53017284-e1b581f3-cb45-4072-aa1f-fa87feed348d"
+                      "body": null
                     }
-                  ],
-                  "uid": "53017284-448bd4ad-ab61-4a32-a356-b0f4f5fc7012"
+                  ]
                 }
-              ],
-              "uid": "53017284-1d6d7dbc-ac58-40d7-8479-a5750ddebc61"
+              ]
             },
             {
               "name": "documents",
@@ -351,8 +345,7 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n  \"id\": \"string\",\n  \"applicationId\": \"string\",\n  \"documentType\": \"string\",\n  \"fileName\": \"string\",\n  \"uploadedAt\": \"2024-05-28T03:09:59.489Z\",\n  \"verificationStatus\": \"rejected\"\n}",
-                      "uid": "53017284-9d0bbe76-8fc7-4bca-ab71-c1be80e0252b"
+                      "body": "{\n  \"id\": \"string\",\n  \"applicationId\": \"string\",\n  \"documentType\": \"string\",\n  \"fileName\": \"string\",\n  \"uploadedAt\": \"2024-05-28T03:09:59.489Z\",\n  \"verificationStatus\": \"rejected\"\n}"
                     },
                     {
                       "name": "Invalid document or unsupported format",
@@ -407,11 +400,9 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": null,
-                      "uid": "53017284-af1a0628-f77f-4658-9569-4daa062a26e8"
+                      "body": null
                     }
-                  ],
-                  "uid": "53017284-05c813db-19c1-4f9a-8199-03857e39a519"
+                  ]
                 },
                 {
                   "name": "List application documents",
@@ -489,14 +480,11 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "[\n  {\n    \"id\": \"string\",\n    \"applicationId\": \"string\",\n    \"documentType\": \"string\",\n    \"fileName\": \"string\",\n    \"uploadedAt\": \"2015-08-15T23:50:48.333Z\",\n    \"verificationStatus\": \"verified\"\n  },\n  {\n    \"id\": \"string\",\n    \"applicationId\": \"string\",\n    \"documentType\": \"string\",\n    \"fileName\": \"string\",\n    \"uploadedAt\": \"1984-06-03T05:03:19.255Z\",\n    \"verificationStatus\": \"verified\"\n  }\n]",
-                      "uid": "53017284-a5fb2686-65fe-4173-84b4-1afb50c6aa8f"
+                      "body": "[\n  {\n    \"id\": \"string\",\n    \"applicationId\": \"string\",\n    \"documentType\": \"string\",\n    \"fileName\": \"string\",\n    \"uploadedAt\": \"2015-08-15T23:50:48.333Z\",\n    \"verificationStatus\": \"verified\"\n  },\n  {\n    \"id\": \"string\",\n    \"applicationId\": \"string\",\n    \"documentType\": \"string\",\n    \"fileName\": \"string\",\n    \"uploadedAt\": \"1984-06-03T05:03:19.255Z\",\n    \"verificationStatus\": \"verified\"\n  }\n]"
                     }
-                  ],
-                  "uid": "53017284-360077ec-f10b-4d3d-97df-b13501ead64b"
+                  ]
                 }
-              ],
-              "uid": "53017284-525b1b5d-5243-4354-a841-b81e95b58c7d"
+              ]
             },
             {
               "name": "Get application details",
@@ -573,8 +561,7 @@
                   ],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n  \"id\": \"string\",\n  \"applicantId\": \"string\",\n  \"productType\": \"string\",\n  \"requestedAmount\": 3261.197653752719,\n  \"termMonths\": 2474,\n  \"status\": \"submitted\",\n  \"createdAt\": \"1955-08-15T15:38:03.305Z\",\n  \"updatedAt\": \"2010-02-19T12:34:40.186Z\",\n  \"underwritingResult\": {\n    \"applicationId\": \"string\",\n    \"status\": \"failed\",\n    \"decision\": \"approved\",\n    \"riskScore\": 88,\n    \"evaluatedAt\": \"1960-04-16T13:19:23.948Z\"\n  }\n}",
-                  "uid": "53017284-715ede85-a913-4897-9544-e3ac2ca83944"
+                  "body": "{\n  \"id\": \"string\",\n  \"applicantId\": \"string\",\n  \"productType\": \"string\",\n  \"requestedAmount\": 3261.197653752719,\n  \"termMonths\": 2474,\n  \"status\": \"submitted\",\n  \"createdAt\": \"1955-08-15T15:38:03.305Z\",\n  \"updatedAt\": \"2010-02-19T12:34:40.186Z\",\n  \"underwritingResult\": {\n    \"applicationId\": \"string\",\n    \"status\": \"failed\",\n    \"decision\": \"approved\",\n    \"riskScore\": 88,\n    \"evaluatedAt\": \"1960-04-16T13:19:23.948Z\"\n  }\n}"
                 },
                 {
                   "name": "Application not found",
@@ -619,14 +606,11 @@
                   ],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"details\": {}\n}",
-                  "uid": "53017284-e8f24dee-3789-4261-a744-f25539d922e3"
+                  "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"details\": {}\n}"
                 }
-              ],
-              "uid": "53017284-3041b5da-e489-44ec-84f6-2330fa57173a"
+              ]
             }
-          ],
-          "uid": "53017284-da26520e-dde7-44b6-b316-3d94fd00f825"
+          ]
         },
         {
           "name": "Submit a new loan application",
@@ -717,8 +701,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n  \"id\": \"string\",\n  \"applicantId\": \"string\",\n  \"productType\": \"string\",\n  \"requestedAmount\": 3261.197653752719,\n  \"termMonths\": 2474,\n  \"status\": \"submitted\",\n  \"createdAt\": \"1955-08-15T15:38:03.305Z\",\n  \"updatedAt\": \"2010-02-19T12:34:40.186Z\",\n  \"underwritingResult\": {\n    \"applicationId\": \"string\",\n    \"status\": \"failed\",\n    \"decision\": \"approved\",\n    \"riskScore\": 88,\n    \"evaluatedAt\": \"1960-04-16T13:19:23.948Z\"\n  }\n}",
-              "uid": "53017284-22e1c433-46ff-4e4a-92da-943a94e65cff"
+              "body": "{\n  \"id\": \"string\",\n  \"applicantId\": \"string\",\n  \"productType\": \"string\",\n  \"requestedAmount\": 3261.197653752719,\n  \"termMonths\": 2474,\n  \"status\": \"submitted\",\n  \"createdAt\": \"1955-08-15T15:38:03.305Z\",\n  \"updatedAt\": \"2010-02-19T12:34:40.186Z\",\n  \"underwritingResult\": {\n    \"applicationId\": \"string\",\n    \"status\": \"failed\",\n    \"decision\": \"approved\",\n    \"riskScore\": 88,\n    \"evaluatedAt\": \"1960-04-16T13:19:23.948Z\"\n  }\n}"
             },
             {
               "name": "Invalid application data",
@@ -770,8 +753,7 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"details\": {}\n}",
-              "uid": "53017284-9d0f7eee-a1ca-4439-9d57-b6cc54afef0d"
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"details\": {}\n}"
             },
             {
               "name": "Duplicate active application exists",
@@ -823,11 +805,9 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"details\": {}\n}",
-              "uid": "53017284-e64fe5f2-1e7e-40ea-86d5-57a05f3a71ad"
+              "body": "{\n  \"code\": \"string\",\n  \"message\": \"string\",\n  \"details\": {}\n}"
             }
-          ],
-          "uid": "53017284-d4a3143e-790b-42a3-880c-30d91fcba711"
+          ]
         },
         {
           "name": "List loan applications",
@@ -930,14 +910,11 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"applicantId\": \"string\",\n      \"productType\": \"string\",\n      \"requestedAmount\": 5101.971507560445,\n      \"termMonths\": 4801,\n      \"status\": \"under_review\",\n      \"createdAt\": \"2012-11-18T14:19:58.384Z\",\n      \"updatedAt\": \"2005-07-18T04:41:58.130Z\",\n      \"underwritingResult\": {\n        \"applicationId\": \"string\",\n        \"status\": \"completed\",\n        \"decision\": \"denied\",\n        \"riskScore\": 46,\n        \"evaluatedAt\": \"1946-10-03T17:06:36.700Z\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"applicantId\": \"string\",\n      \"productType\": \"string\",\n      \"requestedAmount\": 8017.199902563508,\n      \"termMonths\": 2576,\n      \"status\": \"submitted\",\n      \"createdAt\": \"1984-11-05T09:36:51.248Z\",\n      \"updatedAt\": \"1970-10-23T18:25:57.550Z\",\n      \"underwritingResult\": {\n        \"applicationId\": \"string\",\n        \"status\": \"failed\",\n        \"decision\": \"referred_to_manual\",\n        \"riskScore\": 61,\n        \"evaluatedAt\": \"1970-04-17T14:32:05.217Z\"\n      }\n    }\n  ],\n  \"total\": 7235,\n  \"limit\": 9418,\n  \"offset\": 8382\n}",
-              "uid": "53017284-024c3d8d-abe3-4541-9193-707ab0f8d9cf"
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"applicantId\": \"string\",\n      \"productType\": \"string\",\n      \"requestedAmount\": 5101.971507560445,\n      \"termMonths\": 4801,\n      \"status\": \"under_review\",\n      \"createdAt\": \"2012-11-18T14:19:58.384Z\",\n      \"updatedAt\": \"2005-07-18T04:41:58.130Z\",\n      \"underwritingResult\": {\n        \"applicationId\": \"string\",\n        \"status\": \"completed\",\n        \"decision\": \"denied\",\n        \"riskScore\": 46,\n        \"evaluatedAt\": \"1946-10-03T17:06:36.700Z\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"applicantId\": \"string\",\n      \"productType\": \"string\",\n      \"requestedAmount\": 8017.199902563508,\n      \"termMonths\": 2576,\n      \"status\": \"submitted\",\n      \"createdAt\": \"1984-11-05T09:36:51.248Z\",\n      \"updatedAt\": \"1970-10-23T18:25:57.550Z\",\n      \"underwritingResult\": {\n        \"applicationId\": \"string\",\n        \"status\": \"failed\",\n        \"decision\": \"referred_to_manual\",\n        \"riskScore\": 61,\n        \"evaluatedAt\": \"1970-04-17T14:32:05.217Z\"\n      }\n    }\n  ],\n  \"total\": 7235,\n  \"limit\": 9418,\n  \"offset\": 8382\n}"
             }
-          ],
-          "uid": "53017284-a11c547a-4a25-4268-8e7c-c536eaad2570"
+          ]
         }
-      ],
-      "uid": "53017284-a320508e-0267-45a9-9fc0-41b65a169886"
+      ]
     },
     {
       "name": "health",
@@ -1002,14 +979,11 @@
               ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n  \"status\": \"degraded\",\n  \"version\": \"string\",\n  \"uptime\": \"string\",\n  \"dependencies\": {\n    \"database\": \"string\",\n    \"creditBureau\": \"string\",\n    \"documentStore\": \"string\"\n  }\n}",
-              "uid": "53017284-9686f754-81a7-4e4e-973d-07b47a26776f"
+              "body": "{\n  \"status\": \"degraded\",\n  \"version\": \"string\",\n  \"uptime\": \"string\",\n  \"dependencies\": {\n    \"database\": \"string\",\n    \"creditBureau\": \"string\",\n    \"documentStore\": \"string\"\n  }\n}"
             }
-          ],
-          "uid": "53017284-1d130260-5a69-4add-8270-41a09f76b361"
+          ]
         }
-      ],
-      "uid": "53017284-7f20bb24-f72f-4d42-a81a-f11f96f0af28"
+      ]
     }
   ],
   "auth": {
